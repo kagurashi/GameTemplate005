@@ -132,7 +132,7 @@ class MyOverView extends View {
 			} else {
 				// タイトルを起動
 				Intent selectIntent = new Intent();
-				selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.TitleActivity");
+				selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.MainActivity");
 				mContext.startActivity(selectIntent);
 			}
 		}
