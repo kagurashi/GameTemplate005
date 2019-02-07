@@ -31,5 +31,13 @@
 		android:id="@+id/buttonTobineko"
 		android:layout_below="@id/buttonCircle"/>
 
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="WorldMap"
+		android:id="@+id/buttonWorldMap"
+		android:layout_below="@id/buttonTobineko"/>
+	
+	
 </RelativeLayout>
 

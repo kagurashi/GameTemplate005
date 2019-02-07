@@ -25,7 +25,10 @@ public class MainActivity extends Activity
 				public void onClick(View p1)
 				{
 					// TODO: Implement this method
-					textView.setText("Clicked");
+					textView.setText("サークル");
+					Intent selectIntent = new Intent();
+					selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.Circle");
+					startActivity(selectIntent);
 				}
 			});
 
@@ -35,10 +38,8 @@ public class MainActivity extends Activity
 				public boolean onLongClick(View p1)
 				{
 					// TODO: Implement this method
-					textView.setText("Long Clicked");
-					Intent selectIntent = new Intent();
-					selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.Circle");
-					startActivity(selectIntent);
+					textView.setText("サークル");
+					
 					
 					
 					return true;
@@ -55,7 +56,10 @@ public class MainActivity extends Activity
 				public void onClick(View p1)
 				{
 					// TODO: Implement this method
-					textView.setText("Clicked");
+					textView.setText("飛び猫");
+					Intent selectIntent = new Intent();
+					selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.TitleActivity");
+					startActivity(selectIntent);
 				}
 			});
 
@@ -65,18 +69,56 @@ public class MainActivity extends Activity
 				public boolean onLongClick(View p1)
 				{
 					// TODO: Implement this method
-					textView.setText("Long Clicked");
-					Intent selectIntent = new Intent();
-					selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.TitleActivity");
-					startActivity(selectIntent);
+					textView.setText("飛び猫");
+					
 
 
 					return true;
 				}
-			});
+			}
+		);
+			
+		
+			
+			
+		Button buttonWorldMap = (Button) findViewById(R.id.buttonWorldMap);
+			
+			
+		buttonWorldMap.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View p1)
+				{
+					// TODO: Implement this method
+					textView.setText("WorldMap");
+					Intent selectIntent = new Intent();
+					selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.Moving");
+					startActivity(selectIntent);
+				}
+			}
+		);
+
+		buttonWorldMap.setOnLongClickListener(new OnLongClickListener() {
+
+				@Override
+				public boolean onLongClick(View p1)
+				{
+					// TODO: Implement this method
+					textView.setText("WorldMap");
+
+
+
+					return true;
+				}
+			}
+		);
 			
 			
     }
+	
+	
+	
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -90,11 +132,15 @@ public class MainActivity extends Activity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
+		Intent selectIntent = new Intent();
 		switch (item.getItemId())
 		{
 			case R.id.mainMenuTop:
-				Intent selectIntent = new Intent();
 				selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.MainActivity");
+				startActivity(selectIntent);
+				return true;
+			case R.id.mainMenuGame:
+				selectIntent.setClassName("com.example.surfaceview", "com.example.surfaceview.Circle");
 				startActivity(selectIntent);
 				return true;
 			case R.id.mainMenuAbout:

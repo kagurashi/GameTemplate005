@@ -7,6 +7,11 @@
 	/>
 	
 	<item
+        android:title="Game"	
+		android:id="@+id/mainMenuGame"
+	/>
+
+	<item
         android:title="About"	
 		android:id="@+id/mainMenuAbout"
 		/>

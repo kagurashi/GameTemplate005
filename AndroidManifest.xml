@@ -26,6 +26,10 @@
             android:label="@string/app_name" >
         </activity>
 		<activity
+            android:name="com.example.surfaceview.Moving"
+            android:label="@string/app_name" >
+        </activity>
+		<activity
             android:name="com.example.surfaceview.Circle"
             android:label="@string/app_name" >
         </activity>

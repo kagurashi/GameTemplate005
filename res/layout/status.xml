@@ -1,0 +1,44 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+	
+<LinearLayout
+	android:id="@+id/linearLayout1"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentRight="true"
+	android:layout_alignParentTop="true"
+	android:orientation="horizontal" >
+
+	　　<TextView
+		android:id="@+id/GoEvent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="←Country"
+		android:textSize="20sp" />
+    <TextView
+		android:id="@+id/currentRunner"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:text="Capital"
+		android:textSize="45sp" />
+    <TextView
+		android:id="@+id/GoDistance"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="right"
+		android:textSize="20sp" />
+</LinearLayout>
+
+<ListView
+	android:id="@+id/eventList"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" />
+
+</LinearLayout>
